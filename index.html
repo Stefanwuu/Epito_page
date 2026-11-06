@@ -81,26 +81,42 @@
     color: var(--muted);
     font-size: 0.9rem;
   }
+  h2 {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.35rem;
+    margin: 2.5rem 0 0.5rem;
+  }
 </style>
 </head>
 <body>
 <main>
   <p class="wordmark">Stenora</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 30 October 2026</p>
+  <p class="updated">Last updated: 6 November 2026</p>
 
   <p class="lead">Stenora is designed around a single principle: <strong>your voice is processed on your device.</strong></p>
 
   <ul>
     <li>Stenora does <strong>not</strong> collect, transmit, sell, or share your personal data.</li>
     <li>No user accounts, no sign-in. No analytics, ads, or third-party trackers.</li>
-    <li>Recordings, transcripts, speaker names, and summaries are <strong>stored on your device</strong>, and all processing (recording, transcription, speaker identification, AI cleanup and summary) happens on-device.</li>
+    <li>Recordings, transcripts, speaker names, and summaries are <strong>stored on your device</strong>, and all processing (recording, transcription, speaker identification, punctuation and summary) happens on-device.</li>
     <li><strong>Optional iCloud Backup.</strong> If you turn on “Include recordings in iCloud Backup” in Settings (off by default), your recordings, transcripts, and summaries are included in your device’s standard iCloud backup, stored in <strong>your own</strong> iCloud account and never sent to us. While it is off, Stenora asks iOS to leave them out of device backups (iCloud and computer), so they normally aren’t restored on a new device. Stenora asks iOS to leave your speaker profiles (voice data) out of backups in either case.</li>
-    <li><strong>Permissions.</strong> Microphone (only while recording) and Speech Recognition (Apple’s on-device engine — no audio is sent to Apple or anyone). You can revoke either anytime in iOS Settings.</li>
-    <li><strong>The one network request.</strong> An optional, one-time HTTPS download of an AI model file from a public model host (Hugging Face) for higher-quality summaries. It <strong>downloads</strong> a file and sends <strong>no</strong> audio, transcript, or personal data — an anonymous fetch. Skip it and Stenora uses Apple’s built-in on-device model, fully offline.</li>
+    <li><strong>Permissions.</strong> Microphone, used only while recording. If you record on Apple Watch, the Watch asks for its own microphone access. Notifications are optional: iOS asks only after your first Apple Watch recording arrives on the iPhone with the app open, and they only tell you that a Watch recording has reached the iPhone. Declining changes nothing else. You can revoke any of these anytime in the Settings app on your device.</li>
+    <li><strong>Network requests.</strong> Besides Apple’s own services (the App Store for the in-app purchase, and speech files iOS may download for a language), Stenora makes one kind of network request: an optional, one-time HTTPS download of an AI model file from a public model host for higher-quality summaries. The host is Hugging Face, or ModelScope when your device region is China, and each is the fallback for the other. The host receives an ordinary web request, including your IP address. The request <strong>downloads</strong> a file and sends <strong>no</strong> audio, transcript, or other content from your recordings. Without the model, summaries come from Apple Intelligence where it is available and turned on, on your device. Without the model or Apple Intelligence, you get a transcript only.</li>
     <li><strong>Data collection: none</strong> under Apple’s definitions.</li>
     <li><strong>TestFlight betas only.</strong> Apple (not Stenora) automatically collects crash and usage data from your test session and shares it with the developer; this cannot be disabled in-app and applies only to the beta. The App Store version has no such collection.</li>
     <li><strong>Recording others.</strong> Record only with the consent of everyone involved; laws vary by location.</li>
+  </ul>
+
+  <h2>Retention and deletion</h2>
+  <ul>
+    <li><strong>Conversations.</strong> Recordings, transcripts, summaries, and speaker names stay on your device until you delete that conversation in the app or delete the app.</li>
+    <li><strong>Speaker profiles.</strong> Stenora asks the first time you name a speaker, and creates speaker profiles (a name plus numbers that describe a voice, not audio) only after you agree. A profile stays until you delete it in Settings → Speaker profiles or delete the app; deleting a conversation does not delete a profile. Deleting your last profile turns voice recognition off until you name a speaker and agree again. Once you agree, conversations can also store the same kind of numbers for their speakers. Those stay until you delete that conversation or the app, even if you delete the profile.</li>
+    <li><strong>Backups.</strong> If you turned on “Include recordings in iCloud Backup”, the copy in your own iCloud backup is managed by you in iOS Settings. Deleting a conversation or the app does not change a backup iOS has already made.</li>
+    <li><strong>Apple Watch.</strong> A recording made on Apple Watch stays on the Watch until it has been sent to the iPhone, and Stenora then removes it from the Watch.</li>
+    <li><strong>Free-recording list.</strong> To count your free recordings, Stenora keeps a list of random identifiers for the recordings it has processed. The list is in the iOS Keychain and syncs through iCloud Keychain if you use it. It contains no audio or text and is never sent to us. It remains after you delete those recordings or the app, so that the free count is not reset, and the app has no control to clear it.</li>
+    <li><strong>Deleting the app.</strong> Deleting the app removes your conversations, speaker profiles, and settings from your device. Of the data described here, only the free-recording list and any backup copies remain. Files you exported or shared from Stenora are wherever you sent them.</li>
+    <li><strong>Your choices.</strong> You can withdraw microphone or notification access at any time in the Settings app on your device. Deletion is immediate, and we hold no copy. Questions or deletion requests: <a href="mailto:stefanhaotian@gmail.com">stefanhaotian@gmail.com</a>.</li>
   </ul>
 
   <footer>
